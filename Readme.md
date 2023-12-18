@@ -52,4 +52,52 @@
 # JSX
 
 - we can write javascript inside JSX, in between curly braces {}. 
-- 
+
+# Props
+
+- Props (properties) :- Props are just normal arguments to a function. Passing a props to a component is just passing arguments to a function.
+- When we have to dynamicly pass data to some component we will pass it as props.
+
+# Config driven UI
+- Controlling your UI using data or config. And the data is coming from backend
+- De structuring on the fly:- When we send props to component and instead of props we just write the name of the props.
+- Don't use indexs as keys. (Aisa react bolta)
+
+# App structure
+
+// *Header
+//     ->logo 
+//     ->Nav bar
+// *Body
+//     ->search
+//     ->resturantContainer
+//     ->resturantCard
+            // ->img
+            // ->Name of res, star rating, cuisine, deivery time 
+// *Footer
+//     ->Copyright
+//     ->Links
+//     ->Address
+//     ->Contact
+
+- In a file we can only have one default export.
+- To export multiple things then we use named export. 
+
+# Hooks
+
+- A react hook is a normal javascript utility funciton which is given to us by react.
+- There are two very important react hoks:-
+
+(1). useState() -> This is use to create super powerful state variable in react.We have to import it using named import. Use state is used to create state varibale(Super powerful variable). This is called state variable because it mantains the state of our components. When we call useState() function it will send state variable. 
+
+- Whenever a state variable is updated or changes react re-render the component.
+
+- sytax:-
+    const [<updated_list_name> , <set_function_name>] = useState([<data>]); 
+
+# React Reconciliation (React fiber) (react 16):-
+
+- Virtual DOM:- virtual dom is representation of actual DOM. It is nothing just a javascript object.
+- Diff. Algo. :- It finds the difference between the previous virtual DOM and the updated virtual DOM.
+
+(2). useEffect() -> 
