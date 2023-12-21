@@ -1,4 +1,4 @@
-# Namste React 🚀
+# React Notes 🚀
 
 # Parcel
 
@@ -101,3 +101,13 @@
 - Diff. Algo. :- It finds the difference between the previous virtual DOM and the updated virtual DOM.
 
 (2). useEffect() -> 
+
+# Monolith and Microservice architecture:-
+
+- 
+# Conditional Rendering
+- Rendering based on the conditions.
+
+# Shimmer UI
+
+- Loading a fake page until we get a live data from the API. 

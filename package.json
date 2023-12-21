@@ -21,5 +21,6 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "proxy": "http://localhost:1234"
 }
