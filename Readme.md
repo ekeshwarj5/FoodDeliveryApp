@@ -1,4 +1,4 @@
-# Swiggy Clone
+# Food delivery App
 - This project is a Food delivery app that leverages the Swiggy live API to showcase a list of restaurants. The application utilizes the shimmer UI to enhance the user experience while loading content. Additionally, a search functionality has been implemented, allowing users to search for restaurants based on their ratings.
 
 # Features
