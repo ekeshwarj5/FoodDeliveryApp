@@ -5,6 +5,7 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const [listOfRestaurants, setlistOfRestaurants] = useState([]);
+    const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
     const [searchText, setSearchText] = useState("");
 
@@ -18,12 +19,13 @@ const Body = () => {
         );
 
         const json = await data.json();
-        let y =  json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        let y =  json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
         console.log(y);
         setlistOfRestaurants(y);
+        setFilteredRestaurants(y);
     };
-
-    return listOfRestaurants.length === 0 ? <Shimmer/> : (
+    console.log("List of rest :- ",listOfRestaurants);
+    return listOfRestaurants.length === 0 ? (<Shimmer/>) : (
         <div className="body">
             <div>
                 <div className="filter">
@@ -32,7 +34,8 @@ const Body = () => {
                             setSearchText(e.target.value);
                         }}/>
                         <button onClick={()=>{
-
+                            const filteredRestaurant = listOfRestaurants.filter((res) => res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                            setFilteredRestaurants(filteredRestaurant);
                         }}>
                         Search</button>
                     </div>
@@ -53,7 +56,7 @@ const Body = () => {
                 </div>
                 <div className="res-container">
                     {
-                      listOfRestaurants.map((restaurant) => (
+                      filteredRestaurants.map((restaurant) => (
                       <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
                     ))}
                 </div>
